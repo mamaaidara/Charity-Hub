@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between; /* Aligne le logo à gauche et les éléments de menu à droite */
     align-items: center;
-    background-color: #333; /* Fond sombre pour la navbar */
+    background-color: black; /* Fond sombre pour la navbar */
     padding: 10px 10px;
     
    
