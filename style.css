@@ -15,53 +15,197 @@ h1, h2, h3 {
 }
 
 
-/* Navbar */
-.navbar {
+ /* Style général de la barre de navigation */
+ .navbar {
   display: flex;
-  justify-content: space-between; /* Aligne le logo à gauche et les éléments de menu à droite */
+  justify-content: space-between;
   align-items: center;
-  background-color: #333; /* Fond sombre pour la navbar */
-  padding: 10px 10px;
-  
- 
+  padding: 0px 10px;
+  background-color: #010; /* Bleu pour la barre de navigation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'esthétique */
 }
 
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #f4a623;
-  text-align: left; /* Aligne le logo à gauche */
+/* Style pour le logo */
+.navbar .logo img {
+  width: 40px; /* Ajuster la taille du logo */
+  height: auto;
 }
 
-.navbar nav {
-  display: flex;
-  justify-content: flex-end; /* Aligne les éléments de la navigation à droite */
-  align-items: center;
-}
-
+/* Style pour le menu de navigation */
 .navbar nav ul {
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
+/* Style pour chaque élément de menu */
 .navbar nav ul li {
-  font-size: 1.1rem;
-  margin-left: 30px;  /* Espacement entre les éléments du menu */
+  margin: 0 15px; /* Espacement entre les éléments du menu */
 }
 
+/* Style des liens de navigation */
 .navbar nav ul li a {
-  color:white; /* Couleur du texte du menu */
   text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
 
+/* Effet de survol pour les liens */
 .navbar nav ul li a:hover {
- color: #f4a623
+  color: #ffcc00; /* Couleur au survol */
+  transform: scale(1.1); /* Zoom au survol */
 }
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Empile les éléments pour les petits écrans */
+      text-align: center;
+  }
+  
+  .navbar nav ul {
+      flex-direction: column;
+  }
+  
+  .navbar nav ul li {
+      margin: 10px 0;
+  }
+}
+
+
+
+
+.achievements-section {
+  position: relative;
+  background-image: url('https://img.freepik.com/photos-gratuite/personnes-plan-moyen-aidant-ensemble_23-2149142845.jpg?t=st=1737211565~exp=1737215165~hmac=e5c895589a49393a37bc0cae1b3380dd66ed2fc0e206535fd9ba0f2a5aeaa6b7&w=900');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white; /* Texte en blanc */
+  text-align: center;
+  /* Réduit la luminosité à 60% */
+}
+
+.overlay {
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.achievements-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.achievements-section p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #252525;; /* Couleur gris clair pour le texte secondaire */
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 5px;
+  color:;
+}
+
+.stat span {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 20px;
+  }
+
+  .stat strong {
+    font-size: 2rem;
+  }
+}
+
+
+
+.about-section {
+  padding: 50px 30px; /* Espacement autour de la section */
+  background-color: #f5f5f5; /* Fond clair */
+  display: flex;
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  min-height: 100vh; /* La section occupe toute la hauteur de la fenêtre */
+}
+
+.about-container {
+  display: flex;
+  gap: 80px; /* Espacement entre les colonnes */
+  align-items: flex-start; /* Alignement en haut des colonnes */
+  max-width:90%; /* Limite la largeur maximale du contenu */
+  width: 100%; /* S'adapte à la largeur disponible */
+}
+
+.about-left,
+.about-right {
+  flex: 1; /* Chaque colonne occupe 50% de l'espace disponible */
+}
+
+.about-left img {
+  width: 100%; /* Image pleine largeur */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  margin-bottom: 20px; /* Espacement sous l'image */
+}
+
+.description {
+  font-size: 1rem; /* Taille standard pour le texte */
+  line-height: 1.8; /* Interligne aéré */
+  color: #444; /* Texte gris foncé */
+  text-align: justify; /* Texte justifié */
+  margin-bottom: 15px; /* Espacement entre les paragraphes */
+}
+
+.about-right h2 {
+  font-size: 1.8rem; /* Titre plus grand */
+  color: #f4a623; /* Rouge léger */
+  margin-bottom: 20px; /* Espacement sous le titre */
+  font-weight: bold; /* Titre en gras */
+}
+
+.video-container iframe {
+  width: 100%; /* Vidéo pleine largeur */
+  height: 280px; /* Hauteur fixe */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Colonnes empilées */
+    gap: 20px; /* Espacement réduit */
+  }
+
+  .video-container iframe {
+    height: 200px; /* Hauteur ajustée */
+  }
+}
+
+
 
 
 /* Section Vidéo */
@@ -215,7 +359,7 @@ h1, h2, h3 {
 .causes {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
 }
 
 .causes-grid {
@@ -254,6 +398,75 @@ h2 {
   padding: 0 15px 15px;
   color: #555;
 }
+
+
+.logos-section {
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur les écrans larges */
+  gap: 0; /* Ajout d'espace entre les cellules */
+  border: 1px solid #ccc; /* Bordure extérieure de la grille */
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Lignes entre les cellules */
+  padding: 10px;
+}
+
+.logo-item img {
+  padding: 25px;
+  width: 100px; /* Taille maximale des logos */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1); /* Effet zoom au survol */
+}
+
+/* Responsive design pour les écrans moyens */
+@media (max-width: 1024px) {
+  .logos-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  }
+
+  .logo-item img {
+    width: 80px; /* Réduit la taille des logos */
+  }
+}
+
+/* Responsive design pour les écrans petits */
+@media (max-width: 768px) {
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  }
+
+  .logo-item img {
+    width: 70px; /* Réduit encore plus la taille des logos */
+  }
+}
+
+/* Responsive design pour les très petits écrans */
+@media (max-width: 480px) {
+  .logos-grid {
+    grid-template-columns: 1fr; /* 1 colonne */
+  }
+
+  .logo-item img {
+    width: 60px; /* Réduit encore la taille des logos */
+  }
+}
+
 
 
 /* Footer styles */
