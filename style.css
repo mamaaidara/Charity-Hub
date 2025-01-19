@@ -15,78 +15,108 @@ h1, h2, h3 {
 }
 
 
- /* Style général de la barre de navigation */
- .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 10px;
-  background-color: #010; /* Bleu pour la barre de navigation */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'esthétique */
-}
+ 
 
-/* Style pour le logo */
+/* Style général pour la navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 20px; 
+  background-color: black; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  position: sticky; 
+  top: 0; 
+  z-index: 999; 
+}
 .navbar .logo img {
-  width: 40px; /* Ajuster la taille du logo */
+  width: 50px; 
   height: auto;
 }
-
-/* Style pour le menu de navigation */
 .navbar nav ul {
-  list-style: none;
+  list-style: none; 
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex; 
 }
-
-/* Style pour chaque élément de menu */
 .navbar nav ul li {
-  margin: 0 15px; /* Espacement entre les éléments du menu */
+  margin: 0 15px; 
 }
-
-/* Style des liens de navigation */
 .navbar nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
+  text-decoration: none; 
+  color: white; 
+  font-size: 1rem; 
   font-weight: bold;
   transition: color 0.3s, transform 0.3s;
 }
-
-/* Effet de survol pour les liens */
 .navbar nav ul li a:hover {
-  color: #ffcc00; /* Couleur au survol */
-  transform: scale(1.1); /* Zoom au survol */
+  color: #ffcc00; 
+  transform: scale(1.1); 
 }
-
-/* Responsivité */
+.navbar .menu-toggle {
+  display: none; 
+  font-size: 2rem; 
+  color: white; 
+  cursor: pointer;
+  margin-left: 90%;
+  margin-top: -60px;
+}
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column; /* Empile les éléments pour les petits écrans */
-      text-align: center;
+      flex-wrap: wrap; /
   }
-  
+  .navbar .menu-toggle {
+      display: block;
+  }
   .navbar nav ul {
-      flex-direction: column;
+      display: none;
+      flex-direction: column; 
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      width: 100%; 
+      background-color: #020; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+      z-index: 999;
   }
-  
+  .navbar nav ul.active {
+      display: flex;
+  }
   .navbar nav ul li {
-      margin: 10px 0;
+      margin: 10px 0; 
+      text-align: center; 
   }
 }
 
 
 
-
+/*achievements-section*/
 .achievements-section {
   position: relative;
   background-image: url('https://img.freepik.com/photos-gratuite/personnes-plan-moyen-aidant-ensemble_23-2149142845.jpg?t=st=1737211565~exp=1737215165~hmac=e5c895589a49393a37bc0cae1b3380dd66ed2fc0e206535fd9ba0f2a5aeaa6b7&w=900');
   background-size: cover;
   background-position: center;
   padding: 60px 20px;
-  color: white; /* Texte en blanc */
+  color: white; 
   text-align: center;
-  /* Réduit la luminosité à 60% */
+  position: relative; 
+  min-height: 300px;
+}
+
+.achievements-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 1; 
+}
+
+.achievements-section * {
+  position: relative;
+  z-index: 2; 
 }
 
 .overlay {
@@ -103,16 +133,19 @@ h1, h2, h3 {
 .achievements-section p {
   font-size: 1rem;
   margin-bottom: 40px;
-  color: #252525;; /* Couleur gris clair pour le texte secondaire */
+  color: white 
 }
+
 
 .stats-container {
   display: flex;
   justify-content: center;
   gap: 50px;
-  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+  flex-wrap: wrap; 
 }
-
+.overlay h2{
+  color: white;
+}
 .stat {
   text-align: center;
 }
@@ -121,20 +154,16 @@ h1, h2, h3 {
   font-size: 2.5rem;
   display: block;
   margin-bottom: 5px;
-  color:;
+  color:white;
 }
-
 .stat span {
   font-size: 1rem;
   color: white;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
   .stats-container {
     gap: 20px;
   }
-
   .stat strong {
     font-size: 2rem;
   }
@@ -143,65 +172,63 @@ h1, h2, h3 {
 
 
 .about-section {
-  padding: 50px 30px; /* Espacement autour de la section */
-  background-color: #f5f5f5; /* Fond clair */
+  padding: 50px 30px; 
+  background-color: #f5f5f5; 
   display: flex;
-  justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
-  min-height: 100vh; /* La section occupe toute la hauteur de la fenêtre */
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
 }
 
 .about-container {
   display: flex;
-  gap: 80px; /* Espacement entre les colonnes */
-  align-items: flex-start; /* Alignement en haut des colonnes */
-  max-width:90%; /* Limite la largeur maximale du contenu */
-  width: 100%; /* S'adapte à la largeur disponible */
+  gap: 80px; 
+  align-items: flex-start; 
+  max-width:90%; 
+  width: 100%; 
 }
 
 .about-left,
 .about-right {
-  flex: 1; /* Chaque colonne occupe 50% de l'espace disponible */
+  flex: 1; 
 }
 
 .about-left img {
-  width: 100%; /* Image pleine largeur */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
-  margin-bottom: 20px; /* Espacement sous l'image */
+  width: 100%;
+  border-radius: 10px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px; 
 }
 
 .description {
-  font-size: 1rem; /* Taille standard pour le texte */
-  line-height: 1.8; /* Interligne aéré */
-  color: #444; /* Texte gris foncé */
-  text-align: justify; /* Texte justifié */
-  margin-bottom: 15px; /* Espacement entre les paragraphes */
+  font-size: 1rem; 
+  line-height: 1.8; 
+  color: #444; 
+  text-align: justify; 
+  margin-bottom: 15px; 
 }
 
 .about-right h2 {
-  font-size: 1.8rem; /* Titre plus grand */
-  color: #f4a623; /* Rouge léger */
-  margin-bottom: 20px; /* Espacement sous le titre */
-  font-weight: bold; /* Titre en gras */
+  font-size: 1.8rem; 
+  color:#0077cc ; 
+  margin-bottom: 20px; 
+  font-weight: bold; 
 }
 
 .video-container iframe {
-  width: 100%; /* Vidéo pleine largeur */
-  height: 280px; /* Hauteur fixe */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  width: 100%; 
+  height: 280px; 
+  border-radius: 10px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Responsive design */
 @media (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* Colonnes empilées */
-    gap: 20px; /* Espacement réduit */
+    flex-direction: column; 
+    gap: 20px; 
   }
 
   .video-container iframe {
-    height: 200px; /* Hauteur ajustée */
+    height: 200px; 
   }
 }
 
@@ -225,8 +252,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Espacement entre le texte et la vidéo */
-  flex-wrap: wrap; /* Permet de s'adapter aux écrans plus petits */
+  gap: 40px;
 }
 
 .video-container {
@@ -236,7 +262,7 @@ h1, h2, h3 {
 
 .video-container iframe {
   width: 100%;
-  height: 280px; /* Ajustez la hauteur selon vos besoins */
+  height: 280px; 
   border-radius: 10px;
 }
 
@@ -270,24 +296,22 @@ h1, h2, h3 {
 }
 
 .carousel {
-  width: 100%;  /* Largeur du carrousel, ajustez à votre convenance */
+  width: 100%;  
   overflow: hidden;
-  margin: 0 auto;  /* Centrage du carrousel */
+  margin: 0 auto;  
 }
 
 .carousel-container {
   display: flex;
-  width: 40%; /* Pour inclure les trois images en une seule ligne */
+  width: 40%; 
     animation: slide 1s infinite; 
 }
 
 .carousel img {
-  width: 40%;  /* Les images occuperont toute la largeur du carrousel */
+  width: 40%;  
   height: auto;
-  object-fit: cover;  /* Les images seront bien redimensionnées sans se déformer */
+  object-fit: cover;  
 }
-
-/* Animation continue pour faire défiler les images une par une */
 @keyframes slide {
   0% { transform: translateX(0); }
   33% { transform: translateX(-100%); }
@@ -296,8 +320,9 @@ h1, h2, h3 {
 }
 
 .carousel-container {
-  animation: slide 30s infinite linear; /* 6s pour défiler une image toutes les 6 secondes */
+  animation: slide 30s infinite linear; 
 }
+
 /* Section Hero */
 .hero {
   position: relative;
@@ -309,7 +334,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  height: 80vh; /* La section prend toute la hauteur de l'écran */
+  height: 80vh; 
   overflow: hidden;
 }
 
@@ -319,19 +344,19 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* L'image s'adapte à la taille tout en conservant ses proportions */
-  z-index: -1; /* Place l'image en arrière-plan */
-  opacity: 0.8; /* Ajoute un léger effet de transparence */
+  object-fit: cover; 
+  z-index: -1; 
+  opacity: 0.8; 
 }
 
 .hero .overlay {
-  z-index: 2; /* Assure que le contenu est visible au-dessus de l'image */
+  z-index: 2; 
 }
 
 .hero h1 {
   font-size: 3rem;
   margin: 10px 0;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Ajoute un effet de texte lisible */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
 }
 
 .hero p {
@@ -383,11 +408,11 @@ h1, h2, h3 {
 
 
 h2 {
-  margin-top: -10px; /* Ajoute un espace de 30px au-dessus du titre */
-  margin-bottom: 20px; /* Conserve un espace en bas pour éviter un effet trop compact */
-  font-size: 2rem; /* Ajuste la taille si nécessaire */
+  margin-top: -10px; 
+  margin-bottom: 20px; 
+  font-size: 2rem; 
   text-align: center;
-  color: #333; /* Facultatif : amélioration de la lisibilité */
+  color: #333; 
 }
 
 .cause h3 {
@@ -401,7 +426,7 @@ h2 {
 
 
 .logos-section {
-  width: 100%; /* Prend toute la largeur disponible */
+  width: 100%;
   padding: 10px 0;
   align-items: center;
   justify-content: center;
@@ -410,60 +435,56 @@ h2 {
 
 .logos-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur les écrans larges */
-  gap: 0; /* Ajout d'espace entre les cellules */
-  border: 1px solid #ccc; /* Bordure extérieure de la grille */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0;
+  border: 1px solid #ccc; 
 }
 
 .logo-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc; /* Lignes entre les cellules */
+  border: 1px solid #ccc; 
   padding: 10px;
 }
 
 .logo-item img {
   padding: 25px;
-  width: 100px; /* Taille maximale des logos */
+  width: 100px;
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
 
 .logo-item img:hover {
-  transform: scale(1.1); /* Effet zoom au survol */
+  transform: scale(1.1);
 }
-
-/* Responsive design pour les écrans moyens */
 @media (max-width: 1024px) {
   .logos-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   .logo-item img {
-    width: 80px; /* Réduit la taille des logos */
+    width: 80px; 
   }
 }
-
-/* Responsive design pour les écrans petits */
 @media (max-width: 768px) {
   .logos-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .logo-item img {
-    width: 70px; /* Réduit encore plus la taille des logos */
+    width: 70px; 
   }
 }
 
-/* Responsive design pour les très petits écrans */
+
 @media (max-width: 480px) {
   .logos-grid {
-    grid-template-columns: 1fr; /* 1 colonne */
+    grid-template-columns: 1fr; 
   }
 
   .logo-item img {
-    width: 60px; /* Réduit encore la taille des logos */
+    width: 60px;
   }
 }
 
@@ -493,7 +514,7 @@ h2 {
 .footer h3 {
   font-size: 16px;
   margin-bottom: 15px;
-  color: #f4a623;
+  color: #0077cc;
 }
 
 .footer p,
@@ -504,11 +525,11 @@ h2 {
 }
 
 .footer a i {
-  margin-right: 8px; /* Espace entre l'icône et le texte */
+  margin-right: 8px;
 }
 
 .footer a:hover {
-  color: #f4a623;
+  color: #0077cc;
 }
 
 .footer-links ul {
@@ -532,7 +553,7 @@ h2 {
 }
 
 .footer-social i:hover {
-  color: #f4a623;
+  color: #0077cc;
 }
 
 .footer-bottom {
