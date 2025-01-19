@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
   <title>Soutien à la Palestine</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-<header class="navbar">
-  <div class="logo">Soutien Palestine</div>  <!-- Correction de la balise fermante -->
-  <nav>
-    <ul>
-      <li><a href="#home">Accueil</a></li>
-      <li><a href="#causes">À propos</a></li>
-      <li><a href="#about">Projets/Initiatives ?</a></li>
-      <li><a href="#Dons">Dons</a></li>
-      <li><a href="#Contactez-nous">Contactez-nous</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo"><img src="image/logo.png" alt=""></div>  <!-- Correction de la balise fermante -->
+      <span class="menu-toggle">☰</span> <!-- Bouton hamburger -->
+      <nav>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="/about.html">À propos</a></li>
+          <li><a href="#about">Projets</a></li>
+          <li><a href="/dons.html">Dons</a></li>
+          <li><a href="#Contactez-nous">Contactez-nous</a></li>
+        </ul>
+      </nav>
+    </header>
 
 
   
@@ -31,26 +33,38 @@
       <img src="https://img.freepik.com/photos-gratuite/moment-capture-lors-crise-migratoire-personnes_23-2150901764.jpg?t=st=1736889894~exp=1736893494~hmac=128284d1149aa579d263025b761d73e83f73570bf07c92f71f8dc96ef367a8d9&w=900" alt="">
       <h1>Soutenez le peuple palestinien</h1>
       <p>Chaque don compte. Ensemble, construisons un avenir meilleur pour la Palestine.</p>
-      <a href="#causes" class="cta-btn">Faire un Don Maintenant</a>
+      <a href="/dons.html" class="cta-btn">Faire un Don Maintenant</a>
     </div>
   </section>
 
-  <section id="video" class="video-section">
-    <h2>Découvrez notre mission</h2>
-    <div class="video-content">
-      <div class="video-text">
-        <p>Notre mission est de soutenir les familles palestiniennes dans le besoin. Découvrez les actions que nous menons et comment vous pouvez aider. Chaque geste compte, et ensemble, nous pouvons faire une différence.</p>
-        <a href="#donate" class="cta-btn">Faire un Don Maintenant</a>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <!-- Colonne gauche -->
+      <div class="about-left">
+        <img src="https://img.freepik.com/photos-gratuite/vue-avant-boites-dons-sacs-provisions_23-2148613223.jpg?t=st=1737131993~exp=1737135593~hmac=e901a77b8eb010bb42943a758cb5972b8fb8883a9955ec3946492c7b00e52d3a&w=996" alt="Image descriptive" />
+        <p class="description">En Palestine, de nombreuses familles luttent chaque jour pour se nourrir. Les blocages, la rareté des ressources et l’insécurité ont réduit l’accès aux aliments de base. Notre mission est de fournir des repas équilibrés et de lutter contre la malnutrition qui touche les plus vulnérables, notamment les enfants.</p>
+        <p class="description" >Avec votre soutien, nous pouvons distribuer des paniers alimentaires, offrir des repas chauds et redonner espoir à des familles dans le besoin. Chaque geste compte pour bâtir un avenir où personne ne souffre de la faim. Ensemble, soyons solidaires.</p>
       </div>
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/gp6ATRoExyA" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
+  
+      <!-- Colonne droite -->
+      <div class="about-right">
+        <h2>Notre Mission</h2>
+        <p class="description">En Palestine, l’accès aux soins médicaux est une urgence quotidienne. Les hôpitaux manquent d’équipements, les médicaments essentiels sont rares, et le personnel médical fait face à d’immenses défis. Cette vidéo met en lumière nos efforts pour offrir une aide médicale vitale à ceux qui en ont le plus besoin.</p>
+        <p class="description">Votre soutien fait la différence : chaque don permet de fournir des médicaments, de renforcer les cliniques et de sauver des vies. Ensemble, agissons pour garantir à chaque Palestinien le droit à la santé et à la dignité. </p>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/gp6ATRoExyA" 
+            frameborder="0" 
+            allowfullscreen 
+            title="Vidéo descriptive">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
+  
+
   
   <section id="carousel" class="carousel">
     <div class="carousel-container">
@@ -67,6 +81,31 @@
       <img src="https://cdnuploads.aa.com.tr/uploads/Contents/2024/03/21/thumbs_b_c_e3d9196e082ef561900b64d3e8e7e3e9.jpg?v=130410" alt="Image 2">
       <img src="https://img.rts.ch/articles/2023/image/7wn7fd-28063741.image?mw=1280" alt="Image 3">
     </div>
+    </div>
+  </section>
+   
+  <section class="achievements-section">
+    <div class="overlay">
+      <h2>Ce que nous avons accompli jusqu'à présent</h2>
+      <p>Avec un travail juste et acharné, il réussira de la manière qui a sagement accéléré les temps, ou pas lui-même.</p>
+      <div class="stats-container">
+        <div class="stat">
+          <strong>232</strong>
+          <span>Familles satisfaits</span>
+        </div>
+        <div class="stat">
+          <strong>521</strong>
+          <span>Projets</span>
+        </div>
+        <div class="stat">
+          <strong>1 453</strong>
+          <span>Dons</span>
+        </div>
+        <div class="stat">
+          <strong>32</strong>
+          <span>Ouvriers</span>
+        </div>
+      </div>
     </div>
   </section>
   
@@ -92,6 +131,39 @@
       </div>
     </div>
   </section>
+
+
+  
+<div class="logos-section">
+  <div class="logos-grid">
+    <div class="logo-item">
+      <img src="https://seeklogo.com/images/W/wari-logo-C1FD2BA666-seeklogo.com.png" alt="Wari">
+    </div>
+    <div class="logo-item">
+      <img src="https://seeklogo.com/images/O/orange-business-services-logo-6E21147095-seeklogo.com.png" alt="Orange">
+    </div>
+    <div class="logo-item">
+      <img src="https://images.seeklogo.com/logo-png/35/2/senelec-logo-png_seeklogo-358543.png?v=1957909885554079504" alt="Senelec">
+    </div>
+    <div class="logo-item">
+      <img src="https://seeklogo.com/images/T/tigo-logo-9830C437EC-seeklogo.com.png" alt="Tigo">
+    </div>
+    <div class="logo-item">
+      <img src="https://images.seeklogo.com/logo-png/14/2/total-logo-png_seeklogo-141201.png?v=1957936196263474896" alt="Total">
+    </div>
+    <div class="logo-item">
+      <img src="https://seeklogo.com/images/O/onu-logo-B60EEF8C25-seeklogo.com.png" alt="UNICEF">
+    </div>
+    <div class="logo-item">
+      <img src="https://seeklogo.com/images/B/book-sun-education-logo-C5E32E6A67-seeklogo.com.png" alt="Education">
+    </div>
+    <div class="logo-item">
+      <img src="https://images.seeklogo.com/logo-png/35/2/ecobank-logo-png_seeklogo-351361.png?v=1957666537381267752" alt="Ecobank">
+    </div>
+  </div>
+</div>
+
+  
 
   <footer class="footer">
     <div class="footer-container">
@@ -136,6 +208,6 @@
     </div>
   </footer>
   
- 
+ <script src="script.js"></script>
 </body>
 </html>
