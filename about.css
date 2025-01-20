@@ -221,7 +221,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px;
-    background-color: #010; /* Bleu pour la barre de navigation */
+    background-color: black; /* Bleu pour la barre de navigation */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'esthétique */
 }
 
