@@ -14,9 +14,6 @@ h1, h2, h3 {
   margin: 0;
 }
 
-
- 
-
 /* Style général pour la navbar */
 .navbar {
   display: flex;
@@ -75,7 +72,7 @@ h1, h2, h3 {
       top: 60px; 
       left: 0;
       width: 100%; 
-      background-color: #020; 
+      background-color:black ; 
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
       z-index: 999;
   }
@@ -564,3 +561,6 @@ h2 {
   padding-top: 10px;
   color: #888;
 }
+
+
+
