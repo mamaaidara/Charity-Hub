@@ -100,7 +100,7 @@
       }
     }
   
-  /* Style général pour la navbar */
+/* Style général pour la navbar */
 .navbar {
   display: flex;
   justify-content: space-between; 
@@ -170,7 +170,6 @@
       text-align: center; 
   }
 }
-
   /* Footer styles */
   .footer {
     background-color: #222;
