@@ -91,11 +91,11 @@ input, select, button {
 
 input:focus, select:focus {
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
-    border-color: #007BFF;
+    border-color: #3749f0;
 }
 
 button {
-    background-color: #290875;
+    background-color: #3749f0;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
